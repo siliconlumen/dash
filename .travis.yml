@@ -13,7 +13,7 @@ group: deprecated-2017Q3
 deploy:
   provider: releases
   api_key:
-    secure: e1bcc0d9c5eee1cbe9c3e1cf446469ba70014706
+    secure: 05c28629c208866507e666c18879f1ddc0a9eba9
   file: "dash-cli.exe"
   skip_cleanup: true
   on:
