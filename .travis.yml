@@ -14,9 +14,17 @@ deploy:
   provider: releases
   api_key:
     secure: S+bfRgmz2STUPkuJ03qKstbPto2Hv2Wap5V5X0tbjfxbP8N2HawbllIK6n6LDwIZtPQk+VGGxuQoXuXAhu6aXJrjSIWEg/1wIo3/7f9KuAZGnkhSyX1urm6zMsjspcbCRkWaoRRHENhWBrag8lT76/Z0G3sA1a8bHrsPZ7ZWxFFgbn2bYzAlpn0VoFlDiZ3hqCu5I/UByTtqyVgX7seIQdWQ8djoUWRRdEnHmVsjf0HcXQMBjQay0c+wdYVucRTXa8s2tt7Je1COJMFaf790lhd74t1bZrPNaXb8+6H9N6nfIQ/19WaeXdWkdqPeYkwEeLfhPv3PjaAP+n1SshzhpwvEQ8vQF+Di38+88y9NKbpxI601pS+V4mtUE1BpRcXpvvZKVQ58SGMm43U1JsPuigZPwX0Cw6QwnYW32TVLsfzLjVChfOiljaTaRQ6GAzpnKXXoukpiKcMAwi4n9m5B7+bokvfRxDLwQ9DZu/NyWYH0S5cr9jUFYBk1acHLxrpa3yO8+XT6SRHd3m5E/w3nvH+i6YlgqR7RyN4QLepTrvmczintjRhooPCwe8voc8UJeh7HzCDvpCBIg937g6FX69Dv83klsPlpQsLL5D9v9c2sB+2zkB9TLHwLxJjcV9xL+v+mRiXgSSSOTXMY+a9gA4J5mEIV2nCU4S6iVdUWxd8=
-  file: "src/dash-cli.exe"
+  file: "/home/travis/build/siliconlumen/dash/out/false/5.4-x86_64-w64-mingw32/bin/dash-cli.exe"
+  file: "dash-qt"
+  file: "dash-cli"
+  file: "dashd"
+  file: "dash-tx"
+  file: "dash-qt.exe"
+  file: "dash-tx.exe"
+  file: "dashd.exe"
   skip_cleanup: true
   on:
+    branch: master
     tags: true
 
 
