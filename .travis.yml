@@ -14,7 +14,7 @@ deploy:
   provider: releases
   api_key:
     secure: S+bfRgmz2STUPkuJ03qKstbPto2Hv2Wap5V5X0tbjfxbP8N2HawbllIK6n6LDwIZtPQk+VGGxuQoXuXAhu6aXJrjSIWEg/1wIo3/7f9KuAZGnkhSyX1urm6zMsjspcbCRkWaoRRHENhWBrag8lT76/Z0G3sA1a8bHrsPZ7ZWxFFgbn2bYzAlpn0VoFlDiZ3hqCu5I/UByTtqyVgX7seIQdWQ8djoUWRRdEnHmVsjf0HcXQMBjQay0c+wdYVucRTXa8s2tt7Je1COJMFaf790lhd74t1bZrPNaXb8+6H9N6nfIQ/19WaeXdWkdqPeYkwEeLfhPv3PjaAP+n1SshzhpwvEQ8vQF+Di38+88y9NKbpxI601pS+V4mtUE1BpRcXpvvZKVQ58SGMm43U1JsPuigZPwX0Cw6QwnYW32TVLsfzLjVChfOiljaTaRQ6GAzpnKXXoukpiKcMAwi4n9m5B7+bokvfRxDLwQ9DZu/NyWYH0S5cr9jUFYBk1acHLxrpa3yO8+XT6SRHd3m5E/w3nvH+i6YlgqR7RyN4QLepTrvmczintjRhooPCwe8voc8UJeh7HzCDvpCBIg937g6FX69Dv83klsPlpQsLL5D9v9c2sB+2zkB9TLHwLxJjcV9xL+v+mRiXgSSSOTXMY+a9gA4J5mEIV2nCU4S6iVdUWxd8=
-  file: "dash-cli.exe"
+  file: "src/dash-cli.exe"
   skip_cleanup: true
   on:
     tags: true
@@ -57,11 +57,11 @@ env:
 # ARM
     - HOST=arm-linux-gnueabihf PPA="ppa:bitcoin/bitcoin" PACKAGES="g++-arm-linux-gnueabihf" DEP_OPTS="NO_QT=1" CHECK_DOC=1 GOAL="install" BITCOIN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports"
 # Win32
-    - HOST=i686-w64-mingw32 DPKG_ADD_ARCH="i386" DEP_OPTS="NO_QT=1" PPA="ppa:bitcoin/bitcoin" PACKAGES="python3 nsis g++-mingw-w64-i686 wine1.7 bc" RUN_TESTS=true GOAL="install" BITCOIN_CONFIG="--enable-gui --enable-reduce-exports" MAKEJOBS="-j4"
+    - HOST=i686-w64-mingw32 DPKG_ADD_ARCH="i386" DEP_OPTS="NO_QT=0" PPA="ppa:bitcoin/bitcoin" PACKAGES="python3 nsis g++-mingw-w64-i686 wine1.7 bc" RUN_TESTS=true GOAL="install" BITCOIN_CONFIG="--enable-gui --enable-reduce-exports" MAKEJOBS="-j4"
 # 32-bit + dash
-    - HOST=i686-pc-linux-gnu PPA="ppa:bitcoin/bitcoin" PACKAGES="g++-multilib bc python3-zmq" DEP_OPTS="NO_QT=1" RUN_TESTS=true GOAL="install" BITCOIN_CONFIG="--enable-zmq --enable-glibc-back-compat --enable-reduce-exports LDFLAGS=-static-libstdc++" USE_SHELL="/bin/dash" PYZMQ=true
+    - HOST=i686-pc-linux-gnu PPA="ppa:bitcoin/bitcoin" PACKAGES="g++-multilib bc python3-zmq" DEP_OPTS="NO_QT=0" RUN_TESTS=true GOAL="install" BITCOIN_CONFIG="--enable-zmq --enable-glibc-back-compat --enable-reduce-exports LDFLAGS=-static-libstdc++" USE_SHELL="/bin/dash" PYZMQ=true
 # Win64
-    - HOST=x86_64-w64-mingw32 DPKG_ADD_ARCH="i386" DEP_OPTS="NO_QT=1" PPA="ppa:bitcoin/bitcoin" PACKAGES="python3 nsis g++-mingw-w64-x86-64 wine1.7 bc" RUN_TESTS=true GOAL="install" BITCOIN_CONFIG="--enable-gui --enable-reduce-exports" MAKEJOBS="-j4"
+    - HOST=x86_64-w64-mingw32 DPKG_ADD_ARCH="i386" DEP_OPTS="NO_QT=0" PPA="ppa:bitcoin/bitcoin" PACKAGES="python3 nsis g++-mingw-w64-x86-64 wine1.7 bc" RUN_TESTS=true GOAL="install" BITCOIN_CONFIG="--enable-gui --enable-reduce-exports" MAKEJOBS="-j4"
 # dashd
     - HOST=x86_64-unknown-linux-gnu PPA="ppa:bitcoin/bitcoin" PACKAGES="bc python3-zmq" DEP_OPTS="NO_QT=1 NO_UPNP=1 DEBUG=1" RUN_TESTS=true GOAL="install" BITCOIN_CONFIG="--enable-zmq --enable-glibc-back-compat --enable-reduce-exports" CPPFLAGS="-DDEBUG_LOCKORDER -DENABLE_DASH_DEBUG" PYZMQ=true
 # No wallet
