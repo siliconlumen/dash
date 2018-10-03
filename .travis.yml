@@ -22,9 +22,11 @@ deploy:
   file: "dash-qt.exe"
   file: "dash-tx.exe"
   file: "dashd.exe"
+  file_glob: true
   skip_cleanup: true
   on:
     tags: true
+    all_branches: true
 
 
 os: linux
