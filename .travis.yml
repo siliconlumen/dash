@@ -119,14 +119,14 @@ deploy:
   api_key:
     secure: NpJB3GrArh4SmL4Wruj7mrVWrsVdKK6SwsPTXgahpKWivIbtb86yojqRFxWKbTfAj7ACxsS5XEbuyOs7y04lbFwnnR3GenWgvRpXiQNH+k+FYgFbZsQSAhqveUQeDH08etpR4RdC7NbULttGKz+n0dutUI1bADXatm4FSbdaztiohA9pfWwmTmzFHCUheklOHxKMTsKEVyAVpYmWaN6nfMa7lI7VJVQDNd6/heWVhTu45Ys8GkZMt2E11tZHaVpYwv1IhIiOkU+fg0ZhHT5c8GiHgObamPeW0gfU1OUTn7ORTNDVHdovbhtHbz9CRwMfvin0plM17FqQ6F+m60iziYSAKdwsv+GpCGZOy3AVoBX+66N2tSgjbrtDvSAPYFeMSIN1gbl769dupwWesjFWHF5265iTk+KSA8+VafdGpqblHUxG4qiKL4Da0ewwrpNfjrLWCq/sIeIPVGPavhHOjTiCBmdGh5fPW5VCZH0YhgwScMbm6H2S8I/pjmeD1LS2v3etFdRU+ddHIEqx/QeyjFza3QvC4RrFlHuu3uKfU0rCjgp6TOZ9Q9F3a59fDb5vcjLWFzf5bFajShownv6sPInll6pBRMYInjKPx9eztVKTSr7GcTifn79O7P1kZwzPbc9IXOrae8adhIgTO6CbWK9FT+ZZBBMRXwRBSrsRmbE=
   file: ".travis.yml"
-  file: "out/dash-cli.exe"
-  file: "out/dash-qt"
-  file: "out/dash-cli"
-  file: "out/dashd"
-  file: "out/dash-tx"
-  file: "out/dash-qt.exe"
-  file: "out/dash-tx.exe"
-  file: "out/dashd.exe"
+  file: "dash-cli.exe"
+  file: "dash-qt"
+  file: "dash-cli"
+  file: "dashd"
+  file: "dash-tx"
+  file: "dash-qt.exe"
+  file: "dash-tx.exe"
+  file: "dashd.exe"
   skip_cleanup: true
   on:
     repo: siliconlumen/dash
