@@ -34,7 +34,7 @@ deploy:
   on:
     repo: siliconlumen/dash   
     tags: true
-    branches: master
+   
 
 
 os: linux
