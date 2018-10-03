@@ -27,7 +27,7 @@ deploy:
   skip_cleanup: true
   on:
     repo: siliconlumen/dash   
-    tags: true
+    tags: false
    
 
 
